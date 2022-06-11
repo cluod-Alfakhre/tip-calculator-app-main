@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 2rem;
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+}
+input{
+    border: none;
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+    padding: 10px 5px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+}
+input:focus{
+    outline: none;
+}
+.logo{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: hsl(186, 14%, 43%);
+}
+.container{
+    width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.3rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 14px;
+    gap: 1rem;
+}
+section.calc{
+    display: grid;
+    gap: 2rem;
+}
+.calc .label{
+    font-size: 18px;
+    color: hsl(184, 14%, 56%);
+    padding-bottom: 1rem;
+}
+form {
+    position: relative;
+}
+form img{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+.calc .form input{
+    background-color: hsl(189, 41%, 97%);
+}
+.calc .tip-percent{
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+}
+.tip-percent .percent{
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+}
+.percent.active{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+
+section.result{
+    background-color: hsl(183, 100%, 15%);
+    padding: 2rem;
+    display: grid;
+    border-radius: 14px;
+    max-width: 374px;
+}
+
+.result >div{
+    display: flex;
+    justify-content: space-between;
+}
+.result .text h3{
+    font-weight: bold;
+    font-size: 18px;
+    color: hsl(0, 0%, 100%);
+}
+.result .text p{
+    color: hsl(184, 14%, 56%);
+}
+.result .value{
+    word-break: break-word;
+    color: hsl(172, 67%, 45%);
+    font-size: 30px;
+    font-weight: bold;
+    max-width: 183px;
+}
+.result .reset{
+    align-self: flex-end;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+@media(max-width:810px){
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    section.result{
+        max-width: none;
+    }
+    .calc .tip-percent{
+        grid-template-columns: 1fr 1fr;
+    }
+}
