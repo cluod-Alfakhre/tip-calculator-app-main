@@ -8,7 +8,7 @@ body{
     display: grid;
     justify-content: center;
     min-height: 100vh;
-    padding-top: 2rem;
+    padding-top: 5rem;
     background-color: hsl(185, 41%, 84%);
     font-family: 'Space Mono', monospace;
 }
@@ -29,6 +29,7 @@ input:focus{
     text-align: center;
     margin-bottom: 3rem;
     color: hsl(186, 14%, 43%);
+    letter-spacing: 4px;
 }
 .container{
     width: 800px;
@@ -41,7 +42,7 @@ input:focus{
 }
 section.calc{
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
 }
 .calc .label{
     font-size: 18px;
